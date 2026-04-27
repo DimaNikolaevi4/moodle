@@ -1,0 +1,97 @@
+/* local/massenrol/css/styles.css */
+
+/* Основной контейнер таблицы */
+#spreadsheet {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    min-height: 200px;
+}
+
+/* Контейнер для прокрутки */
+.jss_container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Стили для ячеек таблицы (включая шрифт 10px) */
+.jss_worksheet > thead > tr > td,
+.jss_worksheet tbody > tr > td {
+    padding: 4px;
+    font-size: 10px;                /* уменьшенный шрифт */
+}
+
+.jss_worksheet > thead > tr > td {
+    font-weight: bold;
+    background-color: #f8f9fa;
+    padding: 6px;                    /* чуть больше отступ для заголовков */
+}
+
+/* Строки с ошибками */
+.jss_worksheet tr.error-row > td {
+    background-color: #fff0f0;
+}
+
+/* Поля ввода внутри ячеек */
+.jss_worksheet input {
+    padding: 4px !important;
+    border: 1px solid transparent;
+    font-size: 10px;                 /* чтобы текст в input тоже был 10px */
+}
+
+.jss_worksheet input:focus {
+    border: 1px solid #666;
+    outline: none;
+}
+
+/* Кнопки внутри статуса */
+.status-btn {
+    font-size: 0.85em;               /* относительный размер */
+    padding: 2px 8px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+
+.status-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Специфические кнопки в ячейке статуса таблицы */
+#spreadsheet .status-btn {
+    margin: 3px 0;
+    padding: 3px 10px;
+    font-size: 0.85em;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+/* Сообщения об ошибках */
+#validation-errors {
+    margin-bottom: 15px;
+}
+
+/* Панель действий (кнопки Отменить, Очистить) */
+.action-bar {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Контейнеры шагов */
+.step-container {
+    display: none;
+}
+#step1-container {
+    display: block;
+}
+
+/* Плавный переход фона ячеек */
+#spreadsheet tbody td {
+    transition: background-color 0.15s ease-in-out;
+}
+
+#spreadsheet { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
